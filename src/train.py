@@ -8,7 +8,7 @@ from SSLRemoteSensing.utils import utils
 parse=argparse.ArgumentParser()
 # parse.add_argument('--config_file',
 #             default=r'configs/vr_resnet50_inapinting_agr_cfg.py',type=str)
-parse.add_argument('--config_file',default=r'configs/vr_vgg16_inapinting_agr_examplar_cfg.py',type=str)
+parse.add_argument('--config_file',default=r'configs/vr_resnet50_inapinting_agr_examplar_cfg.py',type=str)
 #
 parse.add_argument('--checkpoints_path',default=None,type=str)
 parse.add_argument('--with_imagenet',default=None,type=utils.str2bool)
@@ -27,4 +27,3 @@ if __name__=='__main__':
     models.run_train_interface(checkpoint_path=args.checkpoints_path,
 
                                   log_path=args.log_path)
-

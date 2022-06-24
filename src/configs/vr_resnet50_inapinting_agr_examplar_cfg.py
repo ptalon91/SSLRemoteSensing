@@ -30,13 +30,13 @@ config=dict(
         out_channels=512
     ),
     train_cfg=dict(
-        batch_size=4,
+        batch_size=1,
         device='cuda:0',
         num_epoch=13,
-        num_workers=4,
+        num_workers=1,
         train_data=dict(
 
-            data_path=r'../dataset/train_data',
+            data_path=r'/src/data/train',
             data_format='*.jpg',
             img_size=img_size,
             inpainting_transforms_cfg=dict(

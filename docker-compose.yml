@@ -1,0 +1,17 @@
+version: "3.7"
+
+services:
+  redis:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    user: root
+    ports:
+      - "6006:6006"
+    volumes:
+      - ./src:/src
+    deploy:
+      resources:
+        reservations:
+          devices:
+          - capabilities: [gpu]
